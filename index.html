@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/fmr3gcv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
@@ -14,27 +15,32 @@
         <div class="header">
             <a href="index.html"><img src="." alt="logo of STOKK" class="top-logo"></a>
         </div>
-        <ul class="topnav">
+        <div class="topnav" id="myTopnav">
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Besøk oss</a>
-                <div class="dropdown-content">
+                <a href="javascript:void(0)" id="mylinks" class="dropbtn" onclick="toggleDropdown('dropdown1')">Besøk
+                    oss</a>
+                <div id="dropdown1" class="dropdown-content">
                     <a href="#">Prisar</a>
                     <a href="#">Leige av utstyr</a>
                 </div>
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Klatring</a>
-                <div class="dropdown-content">
+                <a href="javascript:void(0)" id="mylinks" class="dropbtn"
+                    onclick="toggleDropdown('dropdown2')">Klatring</a>
+                <div id="dropdown2" class="dropdown-content">
                     <a href="#">Sikkerhet</a>
                     <a href="#">Ute</a>
                     <a href="#">Aktivitetar</a>
                 </div>
             </li>
-            <li><a href=".">Om oss</a></li>
-            <li><a href=".">Siste nytt</a></li>
-            <li><a href=".">Bidra</a></li>
-            <li><a href=".">Sponsorar</a></li>
-        </ul>
-        <div class="hamburger-menu" id="hamburger-menu">&#9776;</div>
+            <li><a href="." id="mylinks">Om oss</a></li>
+            <li><a href="." id="mylinks">Siste nytt</a></li>
+            <li><a href="." id="mylinks">Bidra</a></li>
+            <li><a href="." id="mylinks">Sponsorar</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a></li>
+        </div>
+
     </nav>
     <div class="welcome">
         <img src="/pictures/banner-image by wirestock on Freepika.jpg" alt="Mountain region">

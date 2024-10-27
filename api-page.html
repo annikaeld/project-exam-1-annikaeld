@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fmr3gcv.css">
+    <title>Fetch page from id in url</title>
+    <style>
+        #content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Loading title...</h1>
+    <div id="content">Loading...</div>
+
+    <script type="module">
+        import { fetchPageFromUrl } from './js/apiContent/fetchPage.js';
+
+        fetchPageFromUrl();
+    </script>
+
+</body>
+
+</html>
