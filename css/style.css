@@ -109,8 +109,12 @@ li a,
     text-decoration: none;
 }
 
+.active-menu-item {
+    text-decoration: underline;
+}
+
 li a:hover,
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn  {
     text-decoration: underline;
 }
 
@@ -179,11 +183,6 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
-}
-
-.responsive {
-    padding: 0 6px;
-    width: 24.99999%;
 }
 
 /*form*/
@@ -272,9 +271,8 @@ input[type=submit]:hover {
         padding: 0;
     }
 
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
+    .expanded {
+        width: 100%;
     }
 
 
@@ -289,26 +287,35 @@ input[type=submit]:hover {
         display: none;
     }
 
+    .topnav li {
+        width: 100px;
+    }
+
     .topnav a.icon {
         float: right;
         display: block;
     }
 
-    .topnav.responsive {
+    .topnav.expanded {
         position: relative;
     }
 
-    .topnav.responsive .icon {
+    .topnav.expanded .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
 
-    .topnav.responsive a {
+    .topnav.expanded a {
         float: none;
         display: block;
         text-align: left;
     }
+
+    li.dropdown {
+        display: inline;
+    }
+    
 }
 
 
