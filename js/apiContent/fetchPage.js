@@ -1,5 +1,5 @@
 import { API_BASE_URL, fetchContent, fetchContentArray } from './fetchContent.js';
-import { getQueryParam } from './getQueryParam.js';
+import { getQueryParam } from '../getQueryParam.js';
 
 async function fetchPageById(pageId) {
     const url = `${API_BASE_URL}/pages/${pageId}`;

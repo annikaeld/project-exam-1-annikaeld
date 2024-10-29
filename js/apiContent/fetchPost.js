@@ -1,5 +1,5 @@
 import { API_BASE_URL, fetchContent } from './fetchContent.js';
-import { getQueryParam } from './getQueryParam.js';
+import { getQueryParam } from '../getQueryParam.js';
 
 async function fetchPost(id) {
     const url = `${API_BASE_URL}/posts/${id}`;
