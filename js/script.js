@@ -2,7 +2,7 @@ function toggleDropdown(id) {
   document.getElementById(id).classList.toggle("show");
 }
 
-function myFunction() {
+function toggleExpandedMenu() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " expanded";

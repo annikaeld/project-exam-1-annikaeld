@@ -13,6 +13,7 @@
     --headline-font-weight: bold;
     --font-size: 1.15em;
     --H1-font-size: 30px;
+    --menu-line-size: 46px;
 }
 
 * {
@@ -23,6 +24,7 @@ html,
 body {
     height: 100%;
     margin: 0;
+
 }
 
 body {
@@ -32,6 +34,24 @@ body {
 
 }
 
+.content-page {
+    max-width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: var(--menu-line-size);
+
+}
+
+.size-large img {
+    max-width: 100%;
+    height: auto;
+    width: 50vw;
+}
+
+figure {
+    margin: 0;
+}
+
 .welcome {
     width: 100%;
 }
@@ -39,6 +59,11 @@ body {
 .welcome img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.menu-line {
+    background-color: var(--menu-line-color);
+    min-height: var(--menu-line-size);
 }
 
 h1 {
@@ -67,15 +92,15 @@ p {
     color: var(--text-color);
 }
 
-.bottom-logo {
+.bottom-logo,
+.top-logo {
     width: 12rem;
-    height: 12rem;
+    height: auto;
+    padding: 2%;
 }
 
 .top-logo {
     content: url(/pictures/STOKK\ logo.svg);
-    width: 12rem;
-    height: auto;
     display: block;
 }
 
@@ -88,6 +113,7 @@ p {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: flex-end;
     gap: 2em;
 }
 
@@ -257,7 +283,7 @@ input[type=submit]:hover {
 
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 856px) {
+@media screen and (max-width: 946px) {
 
     .top-logo {
         content: url(/pictures/STOKK\ logo\ liggande\ grå.png);
@@ -267,6 +293,11 @@ input[type=submit]:hover {
         display: block;
     }
 
+    .navbar {
+        margin-top: 2%;
+        display: flex;
+        justify-content: space-between;
+    }
 
     .leftcolumn,
     .rightcolumn {
@@ -278,12 +309,13 @@ input[type=submit]:hover {
         width: 100%;
     }
 
+    .menu-line {
+        background-color: none;
+        min-height: 0;
+    }
 
-    .col-25,
-    .col-75,
-    input[type=submit] {
-        width: 100%;
-        margin-top: 0;
+    .blank-line {
+        min-height: 0;
     }
 
     .topnav a {
@@ -319,8 +351,28 @@ input[type=submit]:hover {
         display: inline;
     }
 
+    .content-page {
+        max-width: 100%;
+        padding-left: 13%;
+        padding-right: 13%;
+    }
+
+    .size-large img {
+        width: auto;
+    }
+
 }
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 400px) {
+    .size-large img {
+        width: fit-content;
+    }
+
+    .content-page {
+        max-width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
