@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/fmr3gcv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Fetch page from id in url</title>
     <style>
         #content {
@@ -17,14 +18,31 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="header">
+            <a href="index.html"><img src="." alt="logo of STOKK" class="top-logo"></a>
+        </div>
+
+        <div class="topnav" id="myTopnav">
+        </div>
+
+    </nav>
+
     <h1 id="title">Loading title...</h1>
     <div id="content">Loading...</div>
 
     <script type="module">
         import { fetchPageFromUrl } from './js/apiContent/fetchPage.js';
-
+        import { getQueryParam } from './js/getQueryParam.js';
         fetchPageFromUrl();
+        import { addMenu} from './js/menu.js';
+        const thisPageMenuItem = getQueryParam('link');
+        addMenu(thisPageMenuItem);
     </script>
+    <div class="footer">
+        <a href="index.html"> <img src="/pictures/STOKK logo kvit.svg" alt="logo of STOKK" class="bottom-logo"></a>
+    </div>
+    <script src="js/script.js"></script>
 
 </body>
 
