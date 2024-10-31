@@ -15,4 +15,44 @@ async function fetchPostFromUrl() {
     }
 }
 
-export { fetchPostFromUrl };
+async function fetchLatestPosts(limit = 9) {
+    const url = `${API_BASE_URL}/posts?per_page=${limit}&_embed`;
+    const response = await fetch(url);
+    const posts = await response.json();
+    console.log('Latest posts:', posts);
+    return posts;
+}
+
+function extractFirstImage(content) {
+    const imgTagMatch = content.match(/<img[^>]+src="([^">]+)"/);
+    return imgTagMatch ? imgTagMatch[1] : '';
+}
+
+async function displayLatestPosts() {
+    try {
+        const posts = await fetchLatestPosts();
+        const contentElement = document.getElementById('content');
+        contentElement.innerHTML = '';
+
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'post';
+
+            // Get the featured image URL or the first image from the content
+            const featuredImage = post._embedded && post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : extractFirstImage(post.content.rendered);
+            console.log('Featured image:', featuredImage);
+
+            postElement.innerHTML = `
+                <h2>${post.title.rendered}</h2>
+                ${featuredImage ? `<img src="${featuredImage}" alt="${post.title.rendered}">` : ''}
+                <p>${post.excerpt.rendered}</p>
+                <a href="api-post.html?id=${post.id}">Les meir</a>
+            `;
+            contentElement.appendChild(postElement);
+        });
+    } catch (error) {
+        console.error('Error fetching latest posts:', error);
+    }
+}
+
+export { fetchPostFromUrl, fetchLatestPosts, displayLatestPosts };

@@ -1,5 +1,3 @@
-import { getQueryParam } from "./getQueryParam.js";
-
 function addMenu(activeMenuItem) {
   const myTopnav = document.getElementById("myTopnav");
   const dropdownHTML = `
