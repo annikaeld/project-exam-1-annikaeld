@@ -28,9 +28,9 @@ function extractFirstImage(content) {
     return imgTagMatch ? imgTagMatch[1] : '';
 }
 
-async function displayLatestPosts() {
+async function displayLatestPosts(numberOfPosts) {
     try {
-        const posts = await fetchLatestPosts();
+        const posts = await fetchLatestPosts(numberOfPosts);
         const contentElement = document.getElementById('content');
         contentElement.innerHTML = '';
 
@@ -55,4 +55,34 @@ async function displayLatestPosts() {
     }
 }
 
-export { fetchPostFromUrl, fetchLatestPosts, displayLatestPosts };
+async function postsForCarousel(numberOfPosts) {
+    try {
+        const posts = await fetchLatestPosts(numberOfPosts);
+        const contentElement = document.getElementById('carousel-content');
+        contentElement.innerHTML = '';
+        var i= 0;
+
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'card-container';
+
+            // Get the featured image URL or the first image from the content
+            const featuredImage = post._embedded && post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : extractFirstImage(post.content.rendered);
+            console.log('Featured image:', featuredImage);
+
+            i++;
+
+            postElement.innerHTML = `
+                <div class="card card${i}">
+                ${featuredImage ? `<img src="${featuredImage}" alt="${post.title.rendered}">` : ''}
+                <h2>${post.title.rendered}</h2>
+                </div>
+            `;
+            contentElement.appendChild(postElement);
+        });
+    } catch (error) {
+        console.error('Error fetching latest posts:', error);
+    }
+}
+
+export { fetchPostFromUrl, fetchLatestPosts, displayLatestPosts, postsForCarousel };
