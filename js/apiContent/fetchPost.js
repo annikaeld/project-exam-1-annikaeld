@@ -31,7 +31,7 @@ function extractFirstImage(content) {
 async function displayLatestPosts(numberOfPosts) {
     try {
         const posts = await fetchLatestPosts(numberOfPosts);
-        const contentElement = document.getElementById('content');
+        const contentElement = document.getElementById('blogposts');
         contentElement.innerHTML = '';
 
         posts.forEach(post => {
