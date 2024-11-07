@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);
-
+    min-height: 100vh;
 }
 
 .content-page {
@@ -45,7 +45,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     padding: var(--menu-line-size) 0;
-
+    flex: 1;
 }
 
 .size-large img {
@@ -280,6 +280,7 @@ a:hover {
     clear: both;
     position: relative;
     bottom: 0;
+    margin-top: auto;
 }
 
 
