@@ -46,13 +46,14 @@ async function displayLatestPosts(numberOfPosts) {
       console.log("Featured image:", featuredImage);
 
       postElement.innerHTML = `
-                <h2>${post.title.rendered}</h2>
+                <a href="api-post.html?id=${post.id}">
                 ${
                   featuredImage
                     ? `<img src="${featuredImage}" alt="${post.title.rendered}">`
                     : ""
                 }
-                <a href="api-post.html?id=${post.id}">Les meir</a>
+                <h2>${post.title.rendered}</h2>
+                </a>
             `;
       contentElement.appendChild(postElement);
     });

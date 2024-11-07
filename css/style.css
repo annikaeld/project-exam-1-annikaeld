@@ -15,6 +15,7 @@
     --font-size: 20px;
     --H1-font-size: 30px;
     --menu-line-size: 41px;
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 * {
@@ -194,7 +195,7 @@ li.dropdown {
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--shadow)
 }
 
 .wp-block-button a {
@@ -256,7 +257,7 @@ a:hover {
 /*post*/
 #blogposts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
@@ -266,8 +267,24 @@ a:hover {
     object-fit: cover;
 }
 
+.post h2 {
+    text-transform: none;
+
+}
+
 .post {
-    display: grid;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow);
+    padding: 15px;
+    transition: box-shadow 0.2s;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.post:hover {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.5);
 }
 
 /*form*/
@@ -368,6 +385,9 @@ a:hover {
         grid-template-columns: auto;
     }
 
+    #blogposts {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -383,5 +403,8 @@ a:hover {
         padding-right: 5%;
     }
 
+    #blogposts {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
 }
