@@ -10,3 +10,7 @@ function toggleExpandedMenu() {
     x.className = "topnav";
   }
 }
+
+function contactPage() {
+  window.location.href = 'contact.html';
+}

@@ -47,7 +47,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     padding: var(--menu-line-size) 0;
-    flex: 1;
 }
 
 .size-large img {
@@ -200,6 +199,7 @@ li.dropdown {
     box-shadow: var(--shadow);
     border: none;
     font-size: 1rem;
+    margin-bottom: 8px;
 
 }
 
@@ -310,16 +310,17 @@ a:hover {
 input[type=number] {
     background-color: var(--background-color);
     color: var(--text-color);
-    border: 1px solid var(--secondary-background-color);
+    border: 1px solid #aaa;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: large;
     box-shadow: var(--shadow);
+    margin: 8px;
 }
 
 .form__input:hover,
 input[type=number]:hover {
-    border: 1px solid #aaa
+    border: 2px solid #aaa
 }
 
 .form__input:focus,
@@ -337,8 +338,14 @@ input[type=number]:focus {
 }
 
 .contact {
-    max-width: 30rem;
     margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+
 }
 
 
@@ -444,11 +451,19 @@ input[type=number]:focus {
     #blogposts {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    form {
+        width: 60vw;
+    }
 }
 
 @media screen and (max-width: 570px) {
     .content-page {
         max-width: 100%;
+    }
+
+    form {
+        width: 90vw;
     }
 
 }
@@ -462,5 +477,7 @@ input[type=number]:focus {
     #blogposts {
         grid-template-columns: repeat(1, 1fr);
     }
+
+
 
 }

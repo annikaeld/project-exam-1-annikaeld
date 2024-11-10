@@ -11,7 +11,7 @@ function addMenu(activeMenuItem) {
         <li class="dropdown">
             <a href="api-page.html?link=climbing" id="menu-climbing" class="dropbtn" onclick="toggleDropdown('climbingDropdown')">Klatring</a>
             <div id="climbing-dropdown" class="dropdown-content">
-                <a href="api-page.html?link=safety" id="menu-safety">Sikkerhet</a>
+                <a href="api-page.html?link=safety" id="menu-safety">Tryggleik</a>
                 <a href="api-page.html?link=outside" id="menu-outside">Ute</a>
                 <a href="api-page.html?link=courses" id="menu-courses">Aktivitetar</a>
             </div>

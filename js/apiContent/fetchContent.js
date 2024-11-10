@@ -18,6 +18,7 @@ async function fetchContentArray(url) {
         
         if (Array.isArray(data) && data.length > 0) {
             const pageData = data[0]; // Get the first item in the array
+            document.title = pageData.title.rendered;
             document.getElementById('title').innerHTML = pageData.title.rendered;
             document.getElementById('content').innerHTML = pageData.content.rendered;
         } else {
