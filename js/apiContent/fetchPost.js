@@ -65,7 +65,7 @@ async function displayLatestPosts(numberOfPosts) {
                     : ""
                 }
                 <h2>${post.title.rendered}</h2>
-                <p>${formattedDate}</p>
+                <p class="date-blog">${formattedDate}</p>
                 </a>
             `;
       contentElement.appendChild(postElement);
