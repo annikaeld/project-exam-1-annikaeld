@@ -24,7 +24,7 @@
     <h1>Kontakt oss</h1>
     <div class="contact">
         <section>
-            <form id="contact" action="contact-sucess.html" method="GET" novalidate>
+            <form id="contact" action="contact-success.html" method="GET" novalidate onsubmit="return validateForm()">
 
                 <div class="form-error" id="name-error">Skriv navnet ditt her, minimum 5 tegn</div>
                 <label for="name"></label>
@@ -57,12 +57,10 @@
     <script type="module">
         import { addMenu } from './js/menu.js';
         addMenu('');
-        import { postsForCarousel } from './js/apicontent/fetchPost.js';
-        postsForCarousel(12);
+        import { validateForm } from './js/contact.js';
     </script>
 
     <script src="js/script.js"></script>
-    <script src="js/carousel.js"></script>
 </body>
 
 </html>
