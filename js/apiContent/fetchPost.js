@@ -28,6 +28,15 @@ function extractFirstImage(content) {
   return imgTagMatch ? imgTagMatch[1] : "";
 }
 
+function norwegianDate(date) {
+  const dateObj = new Date(date);
+  return new Intl.DateTimeFormat("no-NO", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(dateObj);
+}
+
 async function displayLatestPosts(numberOfPosts) {
   try {
     const posts = await fetchLatestPosts(numberOfPosts);
@@ -45,6 +54,9 @@ async function displayLatestPosts(numberOfPosts) {
           : extractFirstImage(post.content.rendered);
       console.log("Featured image:", featuredImage);
 
+      // Format the date
+      const formattedDate = norwegianDate(post.date);
+
       postElement.innerHTML = `
                 <a href="api-post.html?id=${post.id}">
                 ${
@@ -53,6 +65,7 @@ async function displayLatestPosts(numberOfPosts) {
                     : ""
                 }
                 <h2>${post.title.rendered}</h2>
+                <p>${formattedDate}</p>
                 </a>
             `;
       contentElement.appendChild(postElement);
