@@ -96,11 +96,13 @@ async function postsForCarousel(numberOfPosts) {
       postElement.innerHTML = `
                 <div class="card card${i}">
                 <a href="api-post.html?id=${post.id}">
+                <div class="card-image">
                 ${
                   featuredImage
                     ? `<img src="${featuredImage}" alt="${post.title.rendered}">`
                     : ""
                 }
+                </div>
                 <h2>${post.title.rendered}</h2>
                 </a>
                 </div>

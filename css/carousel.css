@@ -1,5 +1,6 @@
 :root {
   --secondary-background-color: #F5F5F0;
+  --carousel-width: 79vw;
 }
 
 
@@ -8,22 +9,21 @@ img {
   max-width: 100%;
 }
 
+.outer-carousel-container {
+  background-color: var(--secondary-background-color);
+  padding: 5px;
+}
+
 .carousel-container {
-  width: 100vw;
+  width: var(--carousel-width);
   margin: 50px auto;
   position: relative;
   background-color: var(--secondary-background-color);
 }
 
-@media (max-width: 768px) {
-  .carousel-container {
-    width: 95%;
-  }
-}
-
 .inner-carousel {
-  width: 70%;
-  height: 460px;
+  width: var(--carousel-width);
+  height: 24vh;
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
@@ -36,29 +36,30 @@ img {
 }
 
 .card-container {
-  width: 275px;
-  height: 400px;
+  width: 26.6vw;
+  height: 19vw;
   flex-shrink: 0;
-  padding-right: 10px;
+  padding-right: 2vw;
 }
-
-@media (max-width: 768px) {
-  .card-container {
-    width: 184px;
-  }
-}
-
 .card {
   width: 100%;
   height: 100%;
-  /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;*/
-  background-position: center bottom;
-  background-size: center;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
   border-radius: 10px;
+}
+.card h2 {
+  text-align: center;
+}
+
+.card-image {
+  height: 100%;
+  display: flex;
+  justify-self: center;
+}
+
+.card img {
+  height: 100%;
 }
 
 .carousel-nav button {
@@ -74,7 +75,7 @@ img {
 }
 
 .carousel-nav .prev {
-  left: 0px;
+  left: -4vw;
   display: none;
 }
 
@@ -83,9 +84,23 @@ img {
 }
 
 .carousel-nav .next {
-  right: 0px;
+  right: -4vw;
 }
 
 .carousel-nav .next.hide {
   display: none;
 }
+
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    width: 184px;
+  }
+}
+
