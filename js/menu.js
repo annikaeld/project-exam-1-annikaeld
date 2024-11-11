@@ -43,13 +43,11 @@ function addMenu(activeMenuItem) {
       activeElement.className = "active-menu-item";
     }
     if (activeMenuItem == "visit" || activeMenuItem == "climbing") {
-      console.log("visit or climbing");
       const dropdownElement = document.getElementById(
         activeMenuItem + "-dropdown"
       );
       if (dropdownElement) {
         dropdownElement.className = "dropdown-content show";
-        console.log("Updated className:", dropdownElement.className); // Verify the change
       }
     }
   }

@@ -13,9 +13,7 @@ async function fetchPageByLink(pageLink) {
 
 async function fetchPageFromUrl() {
     const pageId = getQueryParam('id');
-    console.log('pageId:', pageId);
     const pageLink = getQueryParam('link');
-    console.log('pageLink:', pageLink);
     if (pageId) {
         await fetchPageById(pageId);
     } else if (pageLink) {

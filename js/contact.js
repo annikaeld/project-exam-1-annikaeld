@@ -13,7 +13,6 @@ const messageError = document.querySelector("#message-error");
 
 function validateForm(event) {
   let isValid = true;
-  console.log("validateForm");
 
   if (checkLength(name.value, 5) === true) {
     nameError.style.display = "none";

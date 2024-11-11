@@ -3,6 +3,7 @@ async function fetchContent(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
+        document.title = data.title.rendered;
         document.getElementById('title').innerHTML = data.title.rendered;
         document.getElementById('content').innerHTML = data.content.rendered;
     } catch (error) {

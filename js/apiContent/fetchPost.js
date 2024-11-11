@@ -19,7 +19,6 @@ async function fetchLatestPosts(limit = 9) {
   const url = `${API_BASE_URL}/posts?per_page=${limit}&_embed`;
   const response = await fetch(url);
   const posts = await response.json();
-  console.log("Latest posts:", posts);
   return posts;
 }
 
@@ -52,7 +51,6 @@ async function displayLatestPosts(numberOfPosts) {
         post._embedded && post._embedded["wp:featuredmedia"]
           ? post._embedded["wp:featuredmedia"][0].source_url
           : extractFirstImage(post.content.rendered);
-      console.log("Featured image:", featuredImage);
 
       // Format the date
       const formattedDate = norwegianDate(post.date);
@@ -91,7 +89,6 @@ async function postsForCarousel(numberOfPosts) {
         post._embedded && post._embedded["wp:featuredmedia"]
           ? post._embedded["wp:featuredmedia"][0].source_url
           : extractFirstImage(post.content.rendered);
-      console.log("Featured image:", featuredImage);
 
       i++;
 
