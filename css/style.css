@@ -36,7 +36,7 @@ img {
 }
 
 .wp-block-image img {
-    max-height: 30vw;
+    max-height: 30vh;
     width: auto;
 }
 
@@ -106,7 +106,7 @@ li {
 
 .bottom-logo,
 .top-logo {
-    width: 12rem;
+    max-width: 12rem;
     height: auto;
     padding: 13px;
 }
@@ -365,22 +365,21 @@ form {
     }
 }
 
-/* The Modal (background) */
+/* Modal picture */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 60px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
 }
 
-/* Modal Content (image) */
 .modal-content {
     margin: auto;
     display: block;
@@ -388,7 +387,6 @@ form {
     max-width: 700px;
 }
 
-/* Caption of Modal Image */
 #modal-caption {
     margin: auto;
     display: block;
@@ -397,10 +395,8 @@ form {
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
 }
 
-/* Add Animation - Zoom in the Modal */
 .modal-content, #modal-caption { 
     animation-name: zoom;
     animation-duration: 0.6s;
@@ -411,7 +407,6 @@ form {
     to {transform: scale(1)}
 }
 
-/* The Close Button */
 .close {
     position: absolute;
     top: 15px;
@@ -453,7 +448,7 @@ form {
     }
 
     .expanded {
-        width: 100%;
+        width: auto;
     }
 
     .menu-line {
@@ -470,16 +465,24 @@ form {
     }
 
     .topnav li {
-        width: 100px;
+        width: auto;
     }
 
     .topnav a.icon {
         float: right;
         display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav {
+        position: relative;
     }
 
     .topnav.expanded {
         position: relative;
+        padding-top: 30px;
     }
 
     .topnav.expanded .icon {
@@ -494,8 +497,24 @@ form {
         text-align: left;
     }
 
+    .dropdown-content {
+        padding-left: 15px;
+        display: none;
+        min-width: 160px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .dropdown-content.show {
+        display: block;
+    }
+
+    .expanded {
+        display: block;
+    }
+    
     li.dropdown {
-        display: inline;
+        display: block;
     }
 
     .content-page {

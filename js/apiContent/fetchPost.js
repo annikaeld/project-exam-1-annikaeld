@@ -81,6 +81,7 @@ async function postsForCarousel(numberOfPosts) {
     var i = 0;
 
     posts.forEach((post) => {
+      const id = post.id;
       const postElement = document.createElement("div");
       postElement.className = "card-container";
 
@@ -94,12 +95,14 @@ async function postsForCarousel(numberOfPosts) {
 
       postElement.innerHTML = `
                 <div class="card card${i}">
+                <a href="api-post.html?id=${post.id}">
                 ${
                   featuredImage
                     ? `<img src="${featuredImage}" alt="${post.title.rendered}">`
                     : ""
                 }
                 <h2>${post.title.rendered}</h2>
+                </a>
                 </div>
             `;
       contentElement.appendChild(postElement);
