@@ -114,6 +114,12 @@ li {
     color: var(--blue-background);
 }
 
+table,
+th,
+td {
+    border: 1px solid;
+}
+
 .bottom-logo,
 .top-logo {
     max-width: 12rem;
@@ -361,6 +367,11 @@ form {
 
 /* Footer */
 .footer {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute space between the items */
+    align-items: center;
+    /* Align items vertically centered */
 
     background: #383B3E;
     width: 100%;
@@ -368,6 +379,24 @@ form {
     position: relative;
     bottom: 0;
     margin-top: auto;
+}
+
+.footer-left {
+    flex: 1;
+    /* Allow the left div to grow */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.footer-right {
+    width: 220px;
+    /* Specify the width of the right div */
+    text-align: left;
+    /* Align text to the left */
+    margin-left: auto;
+    /* Shift the right div to the right */
+    padding-right: 1vw;
+
 }
 
 @media screen and (max-width: 1500px) {
