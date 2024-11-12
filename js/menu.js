@@ -2,7 +2,7 @@ function addMenu(activeMenuItem) {
   const myTopnav = document.getElementById("myTopnav");
   const dropdownHTML = `
         <li class="dropdown">
-            <a href="api-page.html?link=visit" id="menu-visit" class="dropbtn" onclick="toggleDropdown('visitDropdown')">Besøk oss</a>
+            <a href="api-page.html?link=visit" id="menu-visit" class="dropbtn" onclick="toggleDropdown('visitDropdown')">Finn oss</a>
             <div id="visit-dropdown" class="dropdown-content">
                 <a href="api-page.html?link=prices" id="menu-prices">Prisar</a>
                 <a href="api-page.html?link=rental" id="menu-rental">Leige av utstyr</a>

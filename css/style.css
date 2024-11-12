@@ -100,15 +100,6 @@ li {
     color: var(--text-color);
 }
 
-.footer p {
-    color: var(--background-color);
-}
-
-.footer h1,
-.footer h2 {
-    color: var(--blue-background);
-}
-
 table {
     font-family: var(--font-family);
     border-collapse: collapse;
@@ -298,6 +289,17 @@ a:hover {
     padding: 10px;
 }
 
+/* opening hours */
+.opening-hours p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.opening-hours h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
 /*post*/
 #blogposts {
     display: grid;
@@ -403,18 +405,30 @@ form {
     margin-top: auto;
 }
 
+.footer p {
+    color: var(--background-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer h1,
+.footer h2 {
+    color: var(--blue-background);
+    font-size: 1.38rem;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
 .footer-left {
     flex: 1;
-    /* Allow the left div to grow */
     text-align: left;
-    /* Align text to the left */
+    margin-top: 6px;
+    margin-bottom: 2px;
 }
 
 .footer-right {
     text-align: left;
-    /* Align text to the left */
-    padding-right: 12vw;
-
+    padding-right: 15vw;
 }
 
 /* Modal picture */
@@ -480,6 +494,12 @@ form {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+    .content-page {
+        max-width: 70vw;
+    }
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -596,12 +616,6 @@ form {
     }
 }
 
-@media screen and (max-width: 1500px) {
-    .content-page {
-        max-width: 70vw;
-    }
-}
-
 @media screen and (max-width: 570px) {
 
     .content-page {
@@ -612,6 +626,11 @@ form {
         width: 90vw;
     }
 
+    .footer-right {
+        text-align: left;
+        padding-right: 5vw;
+    }
+    
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */

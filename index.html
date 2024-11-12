@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="chrome" content="nointentdetection" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/carousel.css">
   <link rel="stylesheet" href="https://use.typekit.net/fmr3gcv.css">
@@ -116,16 +117,6 @@
 
 
   <div class="footer">
-    <div class="footer-left">
-      <a href="index.html"> <img src="/pictures/STOKK logo kvit.svg" alt="logo of STOKK" class="bottom-logo"></a>
-    </div>
-    <div class="footer-right">
-      <h2>Opningstider</h2>
-      <p>Mandag: 1900 – 2100</p>
-      <p>Torsdag: 1900 – 2100</p>
-      <p>Laurdag: 1100 – 1600</p>
-      <p>Søndag: 1100 – 1600</p>
-    </div>
   </div>
 
   <script type="module">
@@ -133,6 +124,8 @@
     addMenu('');
     import { postsForCarousel } from './js/apicontent/fetchPost.js';
     postsForCarousel(12);
+    import { addFooter } from './js/footer.js';
+    addFooter();
   </script>
 
   <script src="js/script.js"></script>

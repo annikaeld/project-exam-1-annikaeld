@@ -39,10 +39,14 @@
         <script type="module">
             import { fetchPageFromUrl } from './js/apiContent/fetchPage.js';
             import { getQueryParam } from './js/getQueryParam.js';
-            fetchPageFromUrl();
+            await fetchPageFromUrl();
+            import { insertOpeningHours } from './js/openingHours.js';
+            insertOpeningHours();
             import { addMenu } from './js/menu.js';
             const thisPageMenuItem = getQueryParam('link');
             addMenu(thisPageMenuItem);
+            import { addFooter } from './js/footer.js';
+            addFooter();            
         </script>
     </div>
     <div class="footer">
