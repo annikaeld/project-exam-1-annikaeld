@@ -118,6 +118,7 @@ table {
     font-family: var(--font-family);
     border-collapse: collapse;
     width: 100%;
+    table-layout: fixed;
 }
 
 th,
@@ -355,6 +356,7 @@ input[type=number] {
     font-size: large;
     font-family: var(--font-family);
     margin: 8px;
+    padding: 8px;
 }
 
 .form__input:hover,
@@ -372,7 +374,7 @@ input[type=number]:focus {
 .form-error {
     display: none;
     color: red;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 2px;
 }
 
@@ -420,12 +422,6 @@ form {
     /* Shift the right div to the right */
     padding-right: 1vw;
 
-}
-
-@media screen and (max-width: 1500px) {
-    .content-page {
-        max-width: 70vw;
-    }
 }
 
 /* Modal picture */
@@ -607,7 +603,17 @@ form {
     }
 }
 
+@media screen and (max-width: 1500px) {
+    .content-page {
+        max-width: 70vw;
+    }
+}
+
 @media screen and (max-width: 570px) {
+    .card-text a {
+        text-decoration: none
+    }
+    
     .content-page {
         max-width: 100%;
     }
