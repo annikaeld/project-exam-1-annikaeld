@@ -99,12 +99,24 @@ img {
 @media (max-width: 768px) {
   .carousel-container {
     width: 95%;
+    margin: 25px auto;
   }
-}
 
-@media (max-width: 768px) {
+  .inner-carousel {
+    height: 38vh;
+  }
+
   .card-container {
-    width: 184px;
+    width: var(--carousel-width);
+    height: 30vh;
+  }
+
+  .card a {
+    text-transform: none;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
   }
 }
 
