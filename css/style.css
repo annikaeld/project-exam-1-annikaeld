@@ -35,7 +35,7 @@ img {
     height: auto;
 }
 
-.wp-block-image img {
+.card-image img {
     max-height: 30vh;
     width: auto;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .content-page {
-    max-width: 50vw;
+    max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
     padding: var(--menu-line-size) 0;
