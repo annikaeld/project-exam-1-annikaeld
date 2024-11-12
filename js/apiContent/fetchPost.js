@@ -103,7 +103,9 @@ async function postsForCarousel(numberOfPosts) {
                     : ""
                 }
                 </div>
+                <div class="card-text">
                 <h2>${post.title.rendered}</h2>
+                </div>
                 </a>
                 </div>
             `;
