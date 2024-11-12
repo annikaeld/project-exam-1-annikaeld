@@ -35,11 +35,6 @@ img {
     height: auto;
 }
 
-.card-image img {
-    max-height: 30vh;
-    width: auto;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -256,10 +251,8 @@ li.dropdown {
 }
 
 a {
-
     font-weight: var(--headline-font-weight);
     color: var(--text-color);
-
 }
 
 a:hover {
@@ -268,24 +261,28 @@ a:hover {
 
 /*uteklatring*/
 
+.blush-highlight,
+.blue-highlight,
+.beige-highlight,
+.light-green-highlight {
+    padding: 8px;
+}
+
+
 .light-green-highlight {
     background-color: var(--green-background);
-    padding-top: 3px;
 }
 
 .beige-highlight {
     background-color: var(--secondary-background-color);
-    padding-top: 3px;
 }
 
 .blue-highlight {
     background-color: var(--blue-background);
-    padding-top: 3px;
 }
 
 .blush-highlight {
     background-color: var(--menu-line-color);
-    padding-top: 3px;
 }
 
 .light-green-highlight li,
@@ -414,13 +411,9 @@ form {
 }
 
 .footer-right {
-    width: 220px;
-    /* Specify the width of the right div */
     text-align: left;
     /* Align text to the left */
-    margin-left: auto;
-    /* Shift the right div to the right */
-    padding-right: 1vw;
+    padding-right: 12vw;
 
 }
 
@@ -610,10 +603,7 @@ form {
 }
 
 @media screen and (max-width: 570px) {
-    .card-text a {
-        text-decoration: none
-    }
-    
+
     .content-page {
         max-width: 100%;
     }

@@ -60,6 +60,7 @@ img {
 
 .card a {
   text-transform: none;
+  text-decoration: none;
 }
 
 
@@ -68,6 +69,12 @@ img {
   display: flex;
   justify-content: center;
 }
+
+.card-image img {
+  max-height: 30vh;
+  width: auto;
+}
+
 
 .card-text {
   height: 25%;
