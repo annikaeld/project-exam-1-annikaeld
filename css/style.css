@@ -198,6 +198,7 @@ li.dropdown {
 
 .active-sub-menu-item {
     background-color: var(--cta-color);
+    max-height: 40px;
 }
 
 .show {
@@ -239,6 +240,12 @@ li.dropdown {
 .cta:hover {
     background-color: var(--cta-hover);
     text-decoration: underline;
+}
+
+.centered-button {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 a {
@@ -393,6 +400,7 @@ form {
 .footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     /* Distribute space between the items */
     align-items: center;
     /* Align items vertically centered */
@@ -419,11 +427,46 @@ form {
     margin-top: 0px;
 }
 
+.footer-item {
+    flex: 1 1 25%; /* Each item takes up 25% of the container width */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Optional padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#item-facebook, #item-instagram {
+    height: 70px;
+}
+
+#item-logo, #item-opening-hours {
+    height: 80%
+}
+
+.some {
+    height: 30%;
+}
+
+.some img {
+    height: 100%;
+}
+
 .footer-left {
     flex: 1;
     text-align: left;
     margin-top: 6px;
     margin-bottom: 2px;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 2px;
+    height: 20%;
+}
+
+.footer-center img {
+    height: 100%;
 }
 
 .footer-right {
@@ -616,7 +659,34 @@ form {
     }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 680px) {
+
+    .footer {
+        flex-direction: row;
+    }
+
+    .footer-item {
+        flex: 1 1 50%; /* Each item takes up 50% of the container width on mobile */
+    }
+
+    #item-logo {
+        order: 3; /* Move to the second row */
+    }
+
+    #item-facebook {
+        order: 1; /* Move to the first row */
+    }
+
+    #item-instagram {
+        order: 2; /* Move to the first row */
+    }
+
+    #item-opening-hours {
+        order: 4; /* Move to the second row */
+    }
+}
+
+@media screen and (max-width: 500px) {
 
     .content-page {
         max-width: 100%;

@@ -36,7 +36,9 @@
         <h2 id="title">Nytt</h2>
 
         <div id="blogposts"></div>
-
+        <div class="load-more centered-button">
+            <button class="wp-block-button" id="more-posts-button" onclick="displayMorePosts()">Last inn fleire</button>
+        </div>
     </div>
     <div class="footer">
         <a href="index.html"> <img src="/pictures/STOKK logo kvit.svg" alt="logo of STOKK" class="bottom-logo"></a>
@@ -44,17 +46,14 @@
 
     <script src="js/script.js"></script>
     <script type="module">
-        import { displayLatestPosts } from './js/apiContent/fetchPost.js';
+        import { displayLatestPosts, displayMorePosts } from './js/apiContent/fetchPost.js';
+        window.displayMorePosts = displayMorePosts;
         displayLatestPosts();
         import { addMenu } from './js/menu.js';
         addMenu('latest');
         import { addFooter } from './js/footer.js';
         addFooter();
     </script>
-
-
-
-
 
 </body>
 
