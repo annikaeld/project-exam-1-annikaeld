@@ -51,6 +51,10 @@ body {
     padding: var(--menu-line-size) 0;
 }
 
+#content.post-content img {
+    max-width: 70%;
+}
+
 figure {
     margin: 0;
 }
@@ -501,8 +505,9 @@ form {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    
+    max-width: 95%;
+    max-height: 95vh;
 }
 
 #modal-caption {
