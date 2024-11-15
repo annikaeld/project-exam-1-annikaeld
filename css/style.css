@@ -19,6 +19,8 @@
     --dark-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.5);
 }
 
+/* #region Default styling */
+
 * {
     box-sizing: border-box;
 }
@@ -539,6 +541,8 @@ form {
     cursor: pointer;
 }
 
+/* #endregion */
+
 @media screen and (max-width: 1500px) {
     .content-page {
         max-width: 70vw;
@@ -583,24 +587,23 @@ form {
 
     .topnav a {
         display: none;
-    }
+    }    
 
     .topnav li {
         width: auto;
-    }
+    }    
 
     .topnav a.icon {
         float: right;
         display: block;
         position: absolute;
         right: 0;
-        top: 0;
-    }
+        top: 11px;
+    }    
 
-    .topnav {
+.topnav {
         position: relative;
     }
-
     .topnav.expanded {
         position: relative;
         padding-top: 30px;
@@ -609,7 +612,7 @@ form {
     .topnav.expanded .icon {
         position: absolute;
         right: 0;
-        top: 0;
+        top: 11px;
     }
 
     .topnav.expanded a {
