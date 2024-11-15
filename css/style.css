@@ -20,7 +20,6 @@
 }
 
 /* #region Default styling */
-
 * {
     box-sizing: border-box;
 }
@@ -29,7 +28,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-
+    font-family: var(--font-family);
 }
 
 img {
@@ -552,22 +551,20 @@ form {
     text-decoration: none;
     cursor: pointer;
 }
-
 /* #endregion */
 
 @media screen and (max-width: 1500px) {
-    .welcome {
-        padding-top: 94px;
-    }
-    
     .content-page {
         max-width: 70vw;
     }
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 992px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 992px) {
-
+    .welcome {
+        padding-top: 94px;
+    }
+    
     .top-logo {
         content: url(/pictures/STOKK\ logo\ liggande\ grå.png);
     }
@@ -578,12 +575,6 @@ form {
         justify-content: space-between;
         position: absolute;
         width: 100%;
-    }
-
-    .leftcolumn,
-    .rightcolumn {
-        width: 100%;
-        padding: 0;
     }
 
     .expanded {
@@ -672,10 +663,21 @@ form {
         grid-template-columns: auto;
     }
 
+    .content-page {
+        padding-top: 90px;
+    }
+
+    .content-startpage {
+        padding-top: 20px;
+    }
+    
     #blogposts {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .contact {
+        padding-top: 90px;
+    }
     form {
         width: 60vw;
     }
@@ -727,7 +729,6 @@ form {
         text-align: left;
         padding-right: 5vw;
     }
-
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -736,7 +737,4 @@ form {
     #blogposts {
         grid-template-columns: repeat(1, 1fr);
     }
-
-
-
 }
