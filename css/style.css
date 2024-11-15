@@ -556,6 +556,10 @@ form {
 /* #endregion */
 
 @media screen and (max-width: 1500px) {
+    .welcome {
+        padding-top: 94px;
+    }
+    
     .content-page {
         max-width: 70vw;
     }
@@ -713,7 +717,6 @@ form {
 
     .content-page {
         max-width: 100%;
-        margin-top: 84px;
     }
 
     form {
