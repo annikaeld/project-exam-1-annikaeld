@@ -303,6 +303,7 @@ a:hover {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .opening-hours h2 {
     font-size: 1.5rem;
     margin-top: 30px;
@@ -430,17 +431,23 @@ form {
 }
 
 .footer-item {
-    flex: 1 1 25%; /* Each item takes up 25% of the container width */
-    text-align: center; /* Center the text */
-    padding: 10px; /* Optional padding */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    flex: 1 1 25%;
+    /* Each item takes up 25% of the container width */
+    text-align: center;
+    /* Center the text */
+    padding: 10px;
+    /* Optional padding */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
 }
 
-#item-facebook, #item-instagram {
+#item-facebook,
+#item-instagram {
     height: 70px;
 }
 
-#item-logo, #item-opening-hours {
+#item-logo,
+#item-opening-hours {
     height: 80%
 }
 
@@ -556,14 +563,12 @@ form {
         content: url(/pictures/STOKK\ logo\ liggande\ grå.png);
     }
 
-    .topnav {
-        display: block;
-    }
-
     .navbar {
         margin-top: 2%;
         display: flex;
         justify-content: space-between;
+        position: absolute;
+        width: 100%;
     }
 
     .leftcolumn,
@@ -587,11 +592,19 @@ form {
 
     .topnav a {
         display: none;
-    }    
+    }
 
     .topnav li {
         width: auto;
-    }    
+    }
+
+    .topnav {
+        display: block;
+        position: relative;
+        background-color: var(--background-color);
+        position: absolute;
+        right: 0px;
+    }
 
     .topnav a.icon {
         float: right;
@@ -599,14 +612,11 @@ form {
         position: absolute;
         right: 0;
         top: 11px;
-    }    
-
-.topnav {
-        position: relative;
     }
+
+
     .topnav.expanded {
-        position: relative;
-        padding-top: 30px;
+        padding-top: 13px;
     }
 
     .topnav.expanded .icon {
@@ -629,7 +639,7 @@ form {
         z-index: 1;
     }
 
-    .dropdown-content.show {
+    .dropdown-content {
         display: block;
     }
 
@@ -669,23 +679,28 @@ form {
     }
 
     .footer-item {
-        flex: 1 1 50%; /* Each item takes up 50% of the container width on mobile */
+        flex: 1 1 50%;
+        /* Each item takes up 50% of the container width on mobile */
     }
 
     #item-logo {
-        order: 3; /* Move to the second row */
+        order: 3;
+        /* Move to the second row */
     }
 
     #item-facebook {
-        order: 1; /* Move to the first row */
+        order: 1;
+        /* Move to the first row */
     }
 
     #item-instagram {
-        order: 2; /* Move to the first row */
+        order: 2;
+        /* Move to the first row */
     }
 
     #item-opening-hours {
-        order: 4; /* Move to the second row */
+        order: 4;
+        /* Move to the second row */
     }
 }
 
@@ -693,6 +708,7 @@ form {
 
     .content-page {
         max-width: 100%;
+        margin-top: 84px;
     }
 
     form {
@@ -703,7 +719,7 @@ form {
         text-align: left;
         padding-right: 5vw;
     }
-    
+
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
