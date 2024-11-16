@@ -1,31 +1,22 @@
 function setupModalImage() {
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var contentId = document.getElementById("content");
-    console.log("Content:", contentId);
+    var modalContainer = document.getElementById("modal-image-container");
     var img = document.querySelector("#content img");
-    console.log("Image:", img);
-    var modalImg = document.getElementById("img01");
+    var modalImg = document.getElementById("modal-image");
 
     img.onclick = function () {
-        modal.style.display = "block";
+        modalContainer.style.display = "block";
         modalImg.src = this.src;
     }
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
+    var closeElement = document.getElementsByClassName("close")[0];
+    closeElement.onclick = function () {
+        modalContainer.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal image, close it
-    modal.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    modalContainer.onclick = function (event) {
+        if (event.target == modalContainer) {
+            modalContainer.style.display = "none";
         }
     }
 }
