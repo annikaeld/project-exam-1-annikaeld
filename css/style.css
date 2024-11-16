@@ -31,8 +31,8 @@ body {
 }
 
 img {
-    max-height: 600px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
 }
 
 body {
