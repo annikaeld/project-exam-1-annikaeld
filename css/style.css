@@ -686,6 +686,10 @@ form {
         padding-top: 90px;
     }
 
+    .contact label {
+        display: none;
+    }
+
     form {
         width: 60vw;
     }
