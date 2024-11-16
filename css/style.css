@@ -26,14 +26,13 @@
 
 html,
 body {
-    height: 100%;
     margin: 0;
     font-family: var(--font-family);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    max-height: 600px;
+    object-fit: cover;
 }
 
 body {
@@ -446,7 +445,7 @@ form {
 
 #item-facebook,
 #item-instagram {
-    height: 70px;
+    height: 60px;
 }
 
 #item-logo,
@@ -504,7 +503,7 @@ form {
 .modal-content {
     margin: auto;
     display: block;
-    
+
     max-width: 95%;
     max-height: 95vh;
 }
@@ -540,6 +539,7 @@ form {
     text-decoration: none;
     cursor: pointer;
 }
+
 /* #endregion */
 
 @media screen and (max-width: 1500px) {
@@ -553,7 +553,7 @@ form {
     .welcome {
         padding-top: 94px;
     }
-    
+
     .top-logo {
         content: url(/pictures/STOKK\ logo\ liggande\ grå.png);
     }
@@ -565,7 +565,7 @@ form {
         position: absolute;
         width: 100%;
     }
-    
+
     #nav-background {
         position: fixed;
         height: 100%;
@@ -677,7 +677,7 @@ form {
     .content-startpage {
         padding-top: 20px;
     }
-    
+
     #blogposts {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -685,6 +685,7 @@ form {
     .contact {
         padding-top: 90px;
     }
+
     form {
         width: 60vw;
     }
