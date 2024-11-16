@@ -4,10 +4,14 @@ function toggleDropdown(id) {
 
 function toggleExpandedMenu() {
   var x = document.getElementById("myTopnav");
+  const navBackground = document.getElementById("nav-background");
+
   if (x.className === "topnav") {
     x.className += " expanded";
+    navBackground.className = "expanded";
   } else {
     x.className = "topnav";
+    navBackground.className = "";
   }
 }
 

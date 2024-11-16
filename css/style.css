@@ -559,11 +559,25 @@ form {
     }
 
     .navbar {
-        margin-top: 2%;
+        margin-top: 0;
         display: flex;
         justify-content: space-between;
         position: absolute;
         width: 100%;
+    }
+    
+    #nav-background {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        display: none;
+        z-index: 10;
+    }
+
+    #nav-background.expanded {
+        display: block;
+        opacity: 0.75;
     }
 
     .expanded {
@@ -606,6 +620,10 @@ form {
 
     .topnav.expanded {
         padding-top: 13px;
+        padding-right: 50px;
+        padding-left: 30px;
+        padding-bottom: 13px;
+        z-index: 20;
     }
 
     .topnav.expanded .icon {
