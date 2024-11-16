@@ -20,8 +20,8 @@ function addMenu(activeMenuItem) {
         <li><a href="latest.html" id="menu-latest">Siste nytt</a></li>
         <li><a href="api-page.html?link=contribute" id="menu-contribute">Bidra</a></li>
         <li><a href="api-page.html?link=sponsors" id="menu-sponsors">Sponsorar</a></li>
-        <li class="icon" onclick="toggleExpandedMenu()">
-            <i class="fa fa-bars"></i>
+        <li class="icon" role="button" tabindex="0" aria-label="Toggle menu" onclick="toggleExpandedMenu()" onkeypress="if(event.key === 'Enter') toggleExpandedMenu()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
         </li>
     `;
   topnav.innerHTML = dropdownHTML;
