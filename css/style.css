@@ -509,18 +509,7 @@ form {
     max-height: 95vh;
 }
 
-#modal-caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-}
-
-.modal-content,
-#modal-caption {
+.modal-content {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
