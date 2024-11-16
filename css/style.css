@@ -393,6 +393,12 @@ input[type=number]:focus {
     margin: auto;
 }
 
+.contact label {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -609,12 +615,21 @@ form {
         right: 0px;
     }
 
-    .topnav a.icon {
+    .topnav li.icon {
         float: right;
         display: block;
         position: absolute;
         right: 0;
         top: 11px;
+        padding: 10px 16px;
+        font-family: var(--headline-font-family);
+        font-weight: var(--headline-font-weight);
+        font-size: var(--font-size);
+        color: var(--menu-text-color);
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+    
     }
 
 
@@ -684,10 +699,6 @@ form {
 
     .contact {
         padding-top: 90px;
-    }
-
-    .contact label {
-        display: none;
     }
 
     form {

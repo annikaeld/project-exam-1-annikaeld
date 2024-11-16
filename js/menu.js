@@ -1,5 +1,5 @@
 function addMenu(activeMenuItem) {
-  const myTopnav = document.getElementById("myTopnav");
+  const topnav = document.getElementById("topnav");
   const dropdownHTML = `
         <li class="dropdown">
             <a href="api-page.html?link=visit" id="menu-visit" class="dropbtn" onclick="toggleDropdown('visitDropdown')">Finn oss</a>
@@ -20,11 +20,11 @@ function addMenu(activeMenuItem) {
         <li><a href="latest.html" id="menu-latest">Siste nytt</a></li>
         <li><a href="api-page.html?link=contribute" id="menu-contribute">Bidra</a></li>
         <li><a href="api-page.html?link=sponsors" id="menu-sponsors">Sponsorar</a></li>
-        <li><a href="javascript:void(0);" class="icon" onclick="toggleExpandedMenu()">
+        <li class="icon" onclick="toggleExpandedMenu()">
             <i class="fa fa-bars"></i>
-        </a></li>
+        </li>
     `;
-  myTopnav.innerHTML = dropdownHTML;
+  topnav.innerHTML = dropdownHTML;
   var activeSubMenuItem;
   if (activeMenuItem == "prices" || activeMenuItem == "rental") {
     activeSubMenuItem = activeMenuItem;
