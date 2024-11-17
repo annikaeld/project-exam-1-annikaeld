@@ -51,17 +51,19 @@
         <a href="index.html"> <img src="/pictures/stokk-logo-kvit.svg" alt="stokk logo" class="bottom-logo"></a>
     </div>
 
-    <script src="js/script.js"></script>
-    <script type="module">
-        import { displayLatestPosts, displayMorePosts } from './js/apiContent/fetchPost.js';
-        window.displayMorePosts = displayMorePosts;
-        displayLatestPosts();
-        import { addMenu } from './js/menu.js';
-        addMenu('latest');
-        import { addFooter } from './js/footer.js';
-        addFooter();
-    </script>
-
 </body>
+
+<script type="module">
+    import { addMenu, toggleDropdown, toggleExpandedMenu } from './js/menu.js';
+    window.toggleDropdown = toggleDropdown;
+    window.toggleExpandedMenu = toggleExpandedMenu;
+    import { addFooter } from './js/footer.js';
+    addFooter();
+    
+    import { displayLatestPosts, displayMorePosts } from './js/apiContent/fetchPost.js';
+    window.displayMorePosts = displayMorePosts;
+    displayLatestPosts();
+    addMenu('latest');
+</script>
 
 </html>

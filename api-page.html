@@ -41,24 +41,28 @@
         <h1 id="title"></h1>
         <div id="content"></div>
 
-        <script type="module">
-            import { fetchPageFromUrl } from './js/apiContent/fetchPage.js';
-            import { getQueryParam } from './js/getQueryParam.js';
-            await fetchPageFromUrl();
-            import { insertOpeningHours } from './js/openingHours.js';
-            insertOpeningHours();
-            import { addMenu } from './js/menu.js';
-            const thisPageMenuItem = getQueryParam('link');
-            addMenu(thisPageMenuItem);
-            import { addFooter } from './js/footer.js';
-            addFooter();            
-        </script>
     </div>
     <div class="footer">
         <a href="index.html"> <img src="/pictures/stokk-logo-kvit.svg" alt="stokk logo" class="bottom-logo"></a>
     </div>
-    <script src="js/script.js"></script>
-
 </body>
+
+<script type="module">
+    import { addMenu, toggleDropdown, toggleExpandedMenu } from './js/menu.js';
+    window.toggleDropdown = toggleDropdown;
+    window.toggleExpandedMenu = toggleExpandedMenu;
+    import { addFooter } from './js/footer.js';
+    addFooter();
+    
+    import { fetchPageFromUrl } from './js/apiContent/fetchPage.js';
+    import { getQueryParam } from './js/getQueryParam.js';
+    await fetchPageFromUrl();
+    import { insertOpeningHours } from './js/openingHours.js';
+    insertOpeningHours();
+    const thisPageMenuItem = getQueryParam('link');
+    addMenu(thisPageMenuItem);
+    import { contactPage } from './js/api-page.js';
+    window.contactPage = contactPage;
+</script>
 
 </html>

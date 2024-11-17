@@ -127,19 +127,20 @@
   <div class="footer">
   </div>
 
-  <script type="module">
-    import { addMenu } from './js/menu.js';
-    addMenu('');
-    import { postsForCarousel } from './js/apicontent/fetchPost.js';
-    postsForCarousel(12);
-    import { addFooter } from './js/footer.js';
-    addFooter();
-    import { initCarousel } from './js/carousel.js';
-    initCarousel();
-  </script>
-
-  <script src="js/script.js"></script>
-
 </body>
+
+<script type="module">
+  import { addMenu, toggleDropdown, toggleExpandedMenu } from './js/menu.js';
+  window.toggleDropdown = toggleDropdown;
+  window.toggleExpandedMenu = toggleExpandedMenu;
+  import { addFooter } from './js/footer.js';
+  addFooter();
+    
+  addMenu('');
+  import { postsForCarousel } from './js/apicontent/fetchPost.js';
+  postsForCarousel(12);
+  import { initCarousel } from './js/carousel.js';
+  initCarousel();
+</script>
 
 </html>

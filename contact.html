@@ -71,15 +71,17 @@
         <a href="index.html"> <img src="/pictures/stokk-logo-kvit.svg" alt="stokk logo" class="bottom-logo"></a>
     </div>
 
-    <script type="module">
-        import { addMenu } from './js/menu.js';
-        addMenu('');
-        import { validateForm } from './js/contact.js';
-        import { addFooter } from './js/footer.js';
-        addFooter();
-    </script>
-
-    <script src="js/script.js"></script>
 </body>
+
+<script type="module">
+    import { addMenu, toggleDropdown, toggleExpandedMenu } from './js/menu.js';
+    window.toggleDropdown = toggleDropdown;
+    window.toggleExpandedMenu = toggleExpandedMenu;
+    import { addFooter } from './js/footer.js';
+    addFooter();
+
+    addMenu('');
+    import { validateForm } from './js/contact.js';
+</script>
 
 </html>
