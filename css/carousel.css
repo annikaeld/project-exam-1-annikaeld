@@ -138,5 +138,12 @@ img {
     width: var(--carousel-width);
   }
 
-}
+  .carousel-nav .prev {
+    margin-left: 8px;
+  }
 
+  .carousel-nav .next {
+    margin-right: 8px;
+  }
+
+}

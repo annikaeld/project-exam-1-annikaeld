@@ -341,9 +341,6 @@ a:hover {
     height: auto;
 }
 
-.instagram-icon,
-.facebook-icon {}
-
 #item-logo,
 #item-opening-hours {
     height: 80%
@@ -551,10 +548,6 @@ th {
 
     .content-page {
         padding: 15px;
-    }
-
-    .size-large img {
-        width: auto;
     }
 
     .small-grid {
