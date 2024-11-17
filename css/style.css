@@ -147,6 +147,10 @@ li a,
     text-decoration: none;
 }
 
+form {
+    padding-bottom: 20px;
+}
+
 .active-menu-item {
     text-decoration: underline;
 }
