@@ -329,8 +329,7 @@ a:hover {
     /* Include padding and border in the element's total width and height */
 }
 
-#item-facebook,
-#item-instagram {
+#item-social-media {
     height: 60px;
 }
 
@@ -566,13 +565,8 @@ th {
         /* Move to the second row */
     }
 
-    #item-facebook {
+    #item-social-media {
         order: 1;
-        /* Move to the first row */
-    }
-
-    #item-instagram {
-        order: 2;
         /* Move to the first row */
     }
 
