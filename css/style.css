@@ -310,6 +310,9 @@ a:hover {
     margin-bottom: 10px;
 }
 
+.footer a {
+    margin-bottom: 13px;
+}
 .footer h1,
 .footer h2 {
     color: var(--blue-background);
