@@ -398,6 +398,7 @@ th {
     background-color: var(--headline-color);
     color: var(--background-color);
 }
+
 /* #endregion */
 
 
@@ -486,10 +487,11 @@ th {
 
     .topnav.expanded {
         padding-top: 13px;
-        padding-right: 50px;
+        padding-right: 80px;
         padding-left: 30px;
-        padding-bottom: 13px;
+        padding-bottom: 100%;
         z-index: 20;
+        margin-top: 13px;
     }
 
     .topnav.expanded .icon {
