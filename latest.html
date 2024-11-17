@@ -55,13 +55,10 @@
 
 <script type="module">
     import { addMenu, toggleDropdown, toggleExpandedMenu } from './js/menu.js';
-    window.toggleDropdown = toggleDropdown;
-    window.toggleExpandedMenu = toggleExpandedMenu;
     import { addFooter } from './js/footer.js';
     addFooter();
-    
+
     import { displayLatestPosts, displayMorePosts } from './js/apiContent/fetchPost.js';
-    window.displayMorePosts = displayMorePosts;
     displayLatestPosts();
     addMenu('latest');
 </script>

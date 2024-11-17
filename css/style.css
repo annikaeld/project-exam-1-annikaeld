@@ -330,9 +330,15 @@ a:hover {
 }
 
 #item-social-media {
-    height: 60px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 5rem;
+    margin: 1rem;
+    height: auto;
 }
+
+.instagram-icon,
+.facebook-icon {}
 
 #item-logo,
 #item-opening-hours {

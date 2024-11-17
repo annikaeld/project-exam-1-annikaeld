@@ -1,6 +1,3 @@
-import { validateEmail } from "./ui/formValidation.js"
-import { checkLength } from "./ui/formValidation.js";
-
 const form = document.querySelector("#contact");
 const name = document.querySelector("#name");
 const nameError = document.querySelector("#name-error");
@@ -11,7 +8,7 @@ const subjectError = document.querySelector("#subject-error");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
 
-function validateForm(event) {
+function validateForm() {
   let isValid = true;
 
   if (checkLength(name.value, 5) === true) {
@@ -43,6 +40,20 @@ function validateForm(event) {
   }
 
   return isValid
+}
+
+export function validateEmail(email) {
+  const regEx = /\S+@\S+.\S+/;
+  const patternMatches = regEx.test(email);
+  return patternMatches;
+}
+
+export function checkLength(value, len) {
+  if (value.trim().length >= len) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 export { validateForm };

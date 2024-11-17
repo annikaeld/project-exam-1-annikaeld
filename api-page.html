@@ -49,20 +49,16 @@
 
 <script type="module">
     import { addMenu, toggleDropdown, toggleExpandedMenu } from './js/menu.js';
-    window.toggleDropdown = toggleDropdown;
-    window.toggleExpandedMenu = toggleExpandedMenu;
     import { addFooter } from './js/footer.js';
     addFooter();
     
-    import { fetchPageFromUrl } from './js/apiContent/fetchPage.js';
     import { getQueryParam } from './js/getQueryParam.js';
     await fetchPageFromUrl();
     import { insertOpeningHours } from './js/openingHours.js';
     insertOpeningHours();
     const thisPageMenuItem = getQueryParam('link');
     addMenu(thisPageMenuItem);
-    import { contactPage } from './js/api-page.js';
-    window.contactPage = contactPage;
+    import { contactPage, fetchPageFromUrl } from './js/api-page.js';
 </script>
 
 </html>

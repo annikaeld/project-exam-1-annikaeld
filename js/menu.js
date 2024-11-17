@@ -79,3 +79,5 @@ function toggleExpandedMenu() {
 }
 
 export { addMenu, toggleDropdown, toggleExpandedMenu };
+window.toggleDropdown = toggleDropdown;
+window.toggleExpandedMenu = toggleExpandedMenu;

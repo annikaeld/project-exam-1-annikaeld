@@ -151,10 +151,6 @@ async function postsForCarousel(numberOfPosts) {
   }
 }
 
-export {
-  fetchPostFromUrl,
-  fetchLatestPosts,
-  displayLatestPosts,
-  displayMorePosts,
-  postsForCarousel,
-};
+export { fetchPostFromUrl, fetchLatestPosts, displayLatestPosts, displayMorePosts, postsForCarousel};
+
+window.displayMorePosts = displayMorePosts;
