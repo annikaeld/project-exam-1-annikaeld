@@ -313,6 +313,7 @@ a:hover {
 .footer a {
     margin-bottom: 13px;
 }
+
 .footer h1,
 .footer h2 {
     color: var(--blue-background);
@@ -516,6 +517,16 @@ th {
         float: none;
         display: block;
         text-align: left;
+    }
+
+    .active-sub-menu-item {
+        text-decoration: underline;
+        color: var(--headline-color);
+        background-color: var(--background-color);
+    }
+
+    .dropdown-content a:hover {
+        background-color: var(--background-color);
     }
 
     .dropdown-content {
