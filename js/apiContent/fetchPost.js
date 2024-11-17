@@ -1,7 +1,7 @@
 import { API_BASE_URL, fetchContent } from "./fetchContent.js";
 import { getQueryParam } from "../getQueryParam.js";
 let postPageNumber = 1;
-let numberOfPostsPerPage = 10;
+const numberOfPostsPerPage = 10;
 let totalPages = 1;
 
 async function fetchPost(id) {
