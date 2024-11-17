@@ -1,3 +1,6 @@
+body.api-post {
+    display: block;
+}
 #content.post-content img {
     max-width: 70%;
 }
