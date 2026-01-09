@@ -24,7 +24,7 @@ Also, CORS needs to be enabled on the WordPress site.
 
 ### Running
 
-The site is hosted on https://stokk-prototype.netlify.app/.
+The site is hosted on https://stokk.org/
 The content is on a WordPress site, and is fetched via API.
 
 ## Contributing/Contact
