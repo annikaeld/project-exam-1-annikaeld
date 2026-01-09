@@ -6,7 +6,7 @@ Putting into practice the skills learned over my first year of studies, creating
 
 ## Description
 
-Prototype for a new site for my local climbing club, using WordPress for content creation, and a "headless CMS" for the website itself. The newest blog posts that are created in WordPress are shown in the carousel on the home page, and on the 'Latest news' page. The contents of pecific pages created in WordPress are fetched and shown on the site.
+Prototype for a new site for my local climbing club, using WordPress for content creation, and a "headless CMS" for the website itself. The newest blog posts that are created in WordPress are shown in the carousel on the home page, and on the 'Latest news' page. The contents of specific pages created in WordPress are fetched and shown on the site.
 
 ## Built With
 
